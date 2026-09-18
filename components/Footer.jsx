@@ -41,7 +41,11 @@ export default function Footer() {
           >
             GitHub
           </a>
-          <span className="footer-social-placeholder">Twitter — coming soon</span>
+          <a href="https://twitter.com/ruzzhx"
+            target="_blank" rel="noreferrer"
+            className="footer-social-link">
+            Twitter
+          </a>
         </div>
 
         {/* Fine print */}

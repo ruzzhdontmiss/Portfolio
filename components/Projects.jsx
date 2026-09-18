@@ -5,31 +5,35 @@ import SectionHead from './SectionHead';
 
 const projects = [
   {
-    title: 'Designing an enterprise knowledge engine',
+    title: 'Multi-tenant RAG knowledge engine',
     meta: 'RAG PIPELINE · 2026',
-    image: '/projects/rag.jpg',
-    github: 'https://github.com/ruzzhdontmiss',
+    image: '/projects/rag.png',
+    bg: '#0d1117',
+    github: 'https://github.com/ruzzhdontmiss/Enterprise-RAG',
     demo: 'https://enterprise-rag-frontend-8miq.onrender.com',
   },
   {
-    title: 'AI matching for resume screening',
+    title: 'AI-powered resume screening',
     meta: 'LLM · NLP · 2026',
-    image: '/projects/resumeiq.jpg',
-    github: 'https://github.com/ruzzhdontmiss',
+    image: '/projects/resumeiq.png',
+    bg: '#111118',
+    github: 'https://github.com/ruzzhdontmiss/resume-ai',
     demo: 'https://resume-ai-opal-seven.vercel.app/',
   },
   {
-    title: 'Web3 video platform with AI rarity',
+    title: 'Web3 short-video platform with AI rarity',
     meta: 'CLIP · WEB3 · 2026',
-    image: '/projects/minecast.jpg',
-    github: 'https://github.com/ruzzhdontmiss',
+    image: '/projects/minecast.png',
+    bg: '#12141c',
+    github: 'https://github.com/ruzzhdontmiss/Minecast',
     demo: 'https://minecast.vercel.app/',
   },
   {
     title: 'Streaming platform with persistent state',
     meta: 'FULL-STACK · 2026',
-    image: '/projects/raine.jpg',
-    github: 'https://github.com/ruzzhdontmiss',
+    image: '/projects/raine.png',
+    bg: '#d8dde8',
+    github: 'https://github.com/ruzzhdontmiss/raine',
     demo: 'https://raine.onrender.com',
   },
 ];
@@ -52,11 +56,12 @@ function ProjectCard({ project, index }) {
         style={{
           display: 'block',
           width: '100%',
-          aspectRatio: '16 / 10',
+          aspectRatio: '16 / 9',
           overflow: 'hidden',
-          borderRadius: '4px',
+          borderRadius: '6px',
           marginBottom: '1rem',
-          backgroundColor: '#dce3ed',
+          backgroundColor: project.bg ?? '#dce3ed',
+          border: '1px solid rgba(61,111,180,.10)',
         }}
         onMouseOver={() => setHovered(true)}
         onMouseOut={() => setHovered(false)}
@@ -68,6 +73,7 @@ function ProjectCard({ project, index }) {
             width: '100%',
             height: '100%',
             objectFit: 'cover',
+            objectPosition: 'top center',
             transition: 'transform 0.6s ease',
             transform: hovered ? 'scale(1.04)' : 'scale(1)',
           }}
